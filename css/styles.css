@@ -32,7 +32,7 @@
     --border-clients-cl: #AFB1B8;
     --hero-bg-cl: C4C4C4;
     --portfolio-img-bgcl: rgba(33, 150, 243, 0.9);
-    
+    --modal-btn-hover: #188CE8;
     /* animation */
     --anim-duration-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -298,11 +298,11 @@ border-radius: 2px;
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
-    /* fixed 1 added transition for backdrop and modal window */
     transition: opacity var(--anim-duration-timing), visibility var(--anim-duration-timing);
 } 
 
 .modal {
+    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -312,6 +312,21 @@ border-radius: 2px;
 
     background-color: var(--add_white_cl);
 }
+
+.modal-title {
+    color: var(--second-cl);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    display: block;
+} 
+    /* margin-top: 0;
+    margin-bottom: 30px;
+    width: 696px; 
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}*/
 
 .backdrop.is-hidden {
     opacity: 0;
@@ -339,6 +354,39 @@ border-radius: 2px;
     position: absolute;
     cursor: pointer;
 }
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    fill: var(--accent-cl);
+}
+
+/* .modal-submit-btn {
+    background: var(--accent-bg-cl);
+    color: var(--add_white_cl);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+
+    padding: 10px 32px;
+    display: inline-block;
+    border-radius: 4px;
+    min-width: 200px;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition: background-color var(--anim-duration-timing);
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+    background-color: var(--modal-btn-hover);
+    color: var(--add_white_cl);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+} */
+
 
 /* FEATURES */
 /* h2 hidden */
@@ -420,7 +468,6 @@ border-radius: 2px;
     position: relative;
 }
 
-/* fixed 2 added height instead of padding */
 .service-label-box {
     display: flex;
     position: absolute;
@@ -526,7 +573,6 @@ text-decoration: none;
     transition: background-color var(--anim-duration-timing);
 }
 
-/* fixed 3 deleted bg-c for icon */
 .team-smi-link:hover .team-smi-icon,
 .team-smi-link:focus .team-smi-icon {
     fill: var(--add_white_cl);
@@ -689,7 +735,6 @@ text-decoration: none;
     transition: background-color var(--anim-duration-timing)
 } 
 
-/* fixed 3 deleted bg-c for icon */
 .footer-smi-link:hover .footer-smi-icon,
 .footer-smi-link:focus .footer-smi-icon {
     fill: var(--add_white_cl);
@@ -800,7 +845,6 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     overflow: hidden;
 }
 
-/* fixed 4 hid deeper overlay */
 .portfolio-overlay {
     content: "";
     display: flex;
