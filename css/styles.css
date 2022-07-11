@@ -32,7 +32,7 @@
     --border-clients-cl: #AFB1B8;
     --hero-bg-cl: C4C4C4;
     --portfolio-img-bgcl: rgba(33, 150, 243, 0.9);
-    --modal-btn-hover: #188CE8;
+    --feedback-btn-hover: #188CE8;
     /* animation */
     --anim-duration-timing: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -360,7 +360,30 @@ border-radius: 2px;
     fill: var(--accent-cl);
 }
 
-/* .modal-submit-btn {
+/* modal form */
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px;
+    /* padding-bottom: 10px; */
+}
+
+.feedback-label {
+    color: green;
+}
+
+.feedback-input-box {
+    display: inline-block;
+}
+
+.feedback-input,
+.feedback-textarea {
+    width: 100%;
+}
+
+.feedback-submit-btn {
     background: var(--accent-bg-cl);
     color: var(--add_white_cl);
     font-weight: 700;
@@ -369,10 +392,14 @@ border-radius: 2px;
     letter-spacing: 0.06em;
     cursor: pointer;
 
-    padding: 10px 32px;
-    display: inline-block;
+    padding: 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
     border-radius: 4px;
-    min-width: 200px;
+    width: 200px;
     text-align: center;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -380,13 +407,11 @@ border-radius: 2px;
     transition: background-color var(--anim-duration-timing);
 }
 
-.modal-submit-btn:hover,
-.modal-submit-btn:focus {
-    background-color: var(--modal-btn-hover);
-    color: var(--add_white_cl);
+.feedback-submit-btn:hover,
+.feedback-submit-btn:focus {
+    background-color: var(--feedback-btn-hover);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-} */
-
+}
 
 /* FEATURES */
 /* h2 hidden */
