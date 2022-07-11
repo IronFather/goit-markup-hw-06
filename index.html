@@ -107,7 +107,7 @@
             </svg>
           </button>
 
-          <!-- modal form -->
+          <!-- modal form / feedback-form -->
           <form
             class="feedback-form"
             name="feedback-form"
@@ -119,38 +119,76 @@
                 >Оставьте свои данные, мы вам перезвоним</strong
               >
             </div>
+            <!-- имя -->
             <div class="feedback-input-box">
-              <label class="feedback-label" for="user-name"><span>Имя</span></label>
-                <input class="feedback-input" type="text" name="user-name" id="user-name" autofocus/>
+              <label class="feedback-label" for="user-name"
+                ><span>Имя</span></label
+              >
+              <div class="feedback-input-svg">
+                <input
+                  class="feedback-input"
+                  type="text"
+                  name="user-name"
+                  id="user-name"
+                  autofocus
+                />
+                <svg class="feedback-icon" width="18" height="18">
+                  <use href="./images/icons.svg#icon-form-person"></use>
+                </svg>
+              </div>
+            </div>
+            <!-- телефон -->
+            <div class="feedback-input-box">
+              <label class="feedback-label" for="user-phone"
+                ><span>Телефон</span></label
+              >
+              <div class="feedback-input-svg">
+                <input
+                  class="feedback-input"
+                  type="tel"
+                  name="user-phone"
+                  id="user-phone"
+                />
+                <svg class="feedback-icon" width="18" height="18">
+                  <use href="./images/icons.svg#icon-form-phone"></use>
+                </svg>
+              </div>
+            </div>
+            <!-- почта -->
+            <div class="feedback-input-box">
+              <label class="feedback-label" for="user-email"
+                ><span>Почта</span></label
+              >
+              <did class="feedback-input-svg">
+                <input class="feedback-input" type="email" name="user-email" />
+                <svg class="feedback-icon" width="18" height="18">
+                  <use href="./images/icons.svg#icon-form-email"></use>
+                </svg>
+              </did>
+            </div>
+            <!-- комментарий -->
+            <div class="feedback-input-box">
+              <label class="feedback-label" for="user-comment"
+                ><span>Комментарий</span></label
+              >
+              <textarea
+                class="feedback-textarea"
+                name="user-comment"
+                rows="5"
+                placeholder="Введите текст"
+              ></textarea>
+            </div>
+            <!-- соглашение -->
+            <div class="feedback-input-box feedback-checkbox">
+              <input type="checkbox" name="user-agreement" value="agreement" />
+              <label class="feedback-label-agreement" for="user-agreement"
+                ><span>Соглашаюсь с рассылкой и принимаю</span>
+                <a class="feedback-link-agreement link" href=""
+                  >Условия договора</a
+                >
               </label>
             </div>
-            <div class="feedback-input-box">
-              <label class="feedback-label" for="user-phone" ><span>Телефон</span></label>
-                <input class="feedback-input" type="tel" name="user-phone" id="user-phone" />
-            </div>
-            <div class="feedback-input-box">
-              <label class="feedback-label" for="user-email"><span>Почта</span></label>
-                <input class="feedback-input" type="email" name="user-email"/>
-            </div>
-            <div class="feedback-input-box">
-              <label class="feedback-label" for="user-comment"><span>Комментарий</span></label>
-                <textarea
-                  class="feedback-textarea"
-                  name="user-comment"
-                  rows="5"
-                  placeholder="Введите текст"
-                ></textarea>
-            </div>
-            <div class="feedback-input-box">
-              <input
-                type="checkbox"
-                name="user-agreement"
-                value="agreement"
-              />
-              <label class="feedback-label" for="user-agreement"><span>Соглашаюсь с рассылкой и принимаю</span>
-                <a class="modal-link link" href="">Условия договора</a>
-              </label>
-            </div>
+            <!-- кнопка отправить -->
             <button class="feedback-submit-btn" type="submit">Отправить</button>
           </form>
         </div>
