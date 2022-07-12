@@ -387,6 +387,16 @@ border-radius: 2px;
     border-radius: 4px;
     padding-left: 42px;
     margin-bottom: 10px;
+    transition: border-color var(--anim-duration-timing);
+}
+
+.feedback-input:focus {
+    border-color: var(--accent-cl);
+    outline: transparent;
+}
+
+.feedback-input:focus + .feedback-icon {
+    fill: var(--accent-cl);
 }
 
 .feedback-input-svg {
@@ -415,6 +425,12 @@ border-radius: 2px;
     resize: none;
     padding: 12px 16px;
     margin-bottom: 20px;
+    transition: border-color var(--anim-duration-timing);
+}
+
+.feedback-textarea:focus {
+    border-color: var(--accent-cl);
+    outline: transparent;
 }
 
 .feedback-checkbox {
