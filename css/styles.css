@@ -465,7 +465,7 @@ border-radius: 2px;
 .feedback-checkbox-input:checked + .feedback-checkbox-icon,
     .feedback-checkbox-input:focus+.feedback-checkbox-icon {
     background-color: var(--accent-bg-cl);
-    background-image: url(/images/checkbox/icon-check.svg);
+    background-image: url(../images/checkbox/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
     border-color: var(--accent-bg-cl);
