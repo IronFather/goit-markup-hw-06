@@ -433,28 +433,42 @@ border-radius: 2px;
     outline: transparent;
 }
 
-.feedback-checkbox {
+/* checkbox user-agreement */
+
+.feedback-checkbox-label {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+    gap: 7px;
 }
 
-.feedback-checkbox-box {
+.feedback-checkbox-icon {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 16px;
     height: 15px;
-    background-color: var(--accent-bg-cl);
-    border: none;
+    border: 2px solid var(--second-cl);
     border-radius: 2px;
+
+    transition: background-color var(--anim-duration-timing), 
+    background-color var(--anim-duration-timing),
+    background-image var(--anim-duration-timing),
+    background-size var(--anim-duration-timing),
+    background-origin var(--anim-duration-timing),
+    border-color var(--anim-duration-timing);
 }
 
-.feedback-checkbox-icon {
-fill: #FFFFFF;
+.feedback-checkbox-input:checked + .feedback-checkbox-icon,
+    .feedback-checkbox-input:focus+.feedback-checkbox-icon {
+    background-color: var(--accent-bg-cl);
+    background-image: url(/images/checkbox/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: var(--accent-bg-cl);
 }
 
 .feedback-submit-btn {
@@ -489,7 +503,8 @@ fill: #FFFFFF;
 
 /* FEATURES */
 /* h2 hidden */
-.features-title {
+.features-title,
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
