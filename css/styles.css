@@ -462,13 +462,18 @@ border-radius: 2px;
     border-color var(--anim-duration-timing);
 }
 
-.feedback-checkbox-input:checked + .feedback-checkbox-icon,
-    .feedback-checkbox-input:focus+.feedback-checkbox-icon {
-    background-color: var(--accent-bg-cl);
-    background-image: url(../images/checkbox/icon-check.svg);
-    background-size: contain;
-    background-origin: border-box;
-    border-color: var(--accent-bg-cl);
+/* fixed 1 reworked checkbox with opacity */
+.feedback-checkbox-input:checked + .feedback-checkbox-icon {
+    background-color: #2196F3;
+    border: 0.2px solid #2196F3;
+}
+
+.svg-check {
+    opacity: 0;
+}
+
+.feedback-checkbox-input:checked + .feedback-checkbox-icon .svg-check {
+    opacity: 1;
 }
 
 .feedback-submit-btn {
@@ -1117,4 +1122,3 @@ ul {
 .service {
     padding-top: 0;
 }
-
